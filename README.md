@@ -113,7 +113,8 @@ The core of the causal framing is the **two-stage modeling approach**. This appr
 * **Stage 1: Social Media to Google Spend**: A Lasso regression model predicts `google_spend_adstock` using the adstock-transformed spend from Facebook, TikTok, and Snapchat. This stage models the first part of the causal chain: how social media spend drives search interest.
 * **Stage 2: Predicted Google Spend to Revenue**: A separate Lasso model then predicts `log_revenue`. The code takes the `predicted_google_spend_adstock` from Stage 1 and includes it as a feature in this second model. The original social media spend variables are **not included** in this stage. This ensures that the model measures the impact of social media spend on revenue **only through its mediated effect** via Google search.
 
-This approach is a direct translation of a **DAG-consistent feature design**. The causal DAG looks like this:
+This approach is a direct translation of a **DAG-consistent feature design**. 
+![download.png](https://mdedit.s3.us-west-2.amazonaws.com/e43ac092-9fc5-41cc-d08b-4bb354ee6a70.png)
 
 ### 2\. Addressing Back-Door Paths and Leakage
 
@@ -140,6 +141,13 @@ The cross-validation approach also serves as a crucial stability check. The R-sq
 ### 3\. Residual Analysis
 
 A visual residual analysis was performed by plotting the difference between the actual and predicted revenue. The plot shows that the residuals are **randomly scattered around zero** with no clear patterns or trends . This confirms that the model has successfully captured all systematic variance in the data, including seasonality and trend, and that no important variables have been omitted.
+
+In addition to plotting residuals, it is important to test whether the errors satisfy key model assumptions:
+
+* **Autocorrelation:** If residuals are correlated over time, the model may be missing temporal structure. We check this with an **Autocorrelation Function (ACF) plot** and the **Durbin–Watson statistic** (values close to 2 suggest no autocorrelation).
+* **Heteroskedasticity:** If residuals show non-constant variance, inference on coefficients may be biased. We test this using the **Breusch–Pagan test** (p-value > 0.05 means we fail to reject homoskedasticity).
+
+These tests provide confidence that the model has captured the main structure in the data and that residual noise behaves as expected.
 
 ### 4\. Sensitivity to Average Price and Promotions
 
