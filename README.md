@@ -8,6 +8,13 @@ The solution is delivered as a reproducible Jupyter Notebook and a detailed READ
 Includes adstock and hyper parameter tuning.
 Detailed explanation of everything follows.
 ---
+## Key Features
+✅ Lasso Regressor with regularization
+✅ Geometric Adstock for carryover effects
+✅ Two-Stage Causal Modeling to handle endogeneity
+✅ Optuna Hyperparameter Tuning
+✅ Time Series Validation to avoid leakage
+✅ Interactive Visualizations with Plotly
 
 ## Table of Contents
 
