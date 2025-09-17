@@ -12,7 +12,7 @@ Detailed explanation of everything follows.
 ✅ Lasso Regressor with regularization
 ✅ Geometric Adstock for carryover effects
 ✅ Two-Stage Causal Modeling to handle endogeneity
-✅ Optuna Hyperparameter Tuning
+✅ Hyperparameter Tuning
 ✅ Time Series Validation to avoid leakage
 ✅ Interactive Visualizations with Plotly
 
