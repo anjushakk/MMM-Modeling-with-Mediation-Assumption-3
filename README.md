@@ -5,7 +5,8 @@
 This project provides a comprehensive Marketing Mix Model (MMM) built to explain weekly revenue as a function of various marketing levers. The model utilizes a sophisticated two-stage approach to explicitly handle the causal assumption that social and display media channels influence revenue indirectly by stimulating search intent, which is captured by Google spend.
 
 The solution is delivered as a reproducible Jupyter Notebook and a detailed README, satisfying key criteria including technical rigor, causal awareness, interpretability, and practical product thinking.
-
+Includes adstock and hyper parameter tuning.
+Detailed explanation of everything follows.
 ---
 
 ## Table of Contents
