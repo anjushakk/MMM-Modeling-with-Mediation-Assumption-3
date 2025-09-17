@@ -1,4 +1,4 @@
-# Marketing Mix Model with Mediation Analysis
+# Marketing Mix Model with Mediation Analysis using Lasso Regression
 
 ## Overview
 
@@ -174,3 +174,9 @@ The two-stage structure provides a clear narrative:
 * **Collinearity**: While the Lasso model helps, there is a risk of high correlation between different marketing channels. This means that while we can say with confidence that `predicted_google_spend_adstock` is a major driver, it's difficult to perfectly isolate the individual contribution of each social media platform that feeds into it.
 * **Mediated Effects**: The most significant risk is a misinterpretation of the causal effects. The model strongly suggests that the value of social media is not in its direct return but in its ability to influence higher-intent searches on Google. A marketing team that cuts social media spend based on a direct-response-only analysis would likely see a negative, unexplainable drop in revenue from Google spend later on.
 * **Trade-offs**: The model can highlight critical business trade-offs. For example, by analyzing the coefficients, you can discuss the trade-off between lowering price and running promotions to increase demand.
+
+  ## Results
+✅ Optimal Decay Rate automatically selected
+✅ Feature Importance Rankings for media channels
+✅ Revenue Predictions with uncertainty bounds
+✅ Visual Comparison of actual vs. predicted performance
