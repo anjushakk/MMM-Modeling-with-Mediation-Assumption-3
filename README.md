@@ -184,7 +184,8 @@ The two-stage structure provides a clear narrative:
 * **Trade-offs**: The model can highlight critical business trade-offs. For example, by analyzing the coefficients, you can discuss the trade-off between lowering price and running promotions to increase demand.
 
   ## Results
-✅ Optimal Decay Rate automatically selected
-✅ Feature Importance Rankings for media channels
-✅ Revenue Predictions with uncertainty bounds
-✅ Visual Comparison of actual vs. predicted performance
+Two-stage causal model.
+High accuracy, great insights.
+Social media drives searches.
+Price is a key driver.
+Model shows autocorrelation.
